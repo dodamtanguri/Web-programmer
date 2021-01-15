@@ -29,7 +29,7 @@ public class N2212 {
         }
         System.out.println(result);
 
-        
+
 
     }
 }
