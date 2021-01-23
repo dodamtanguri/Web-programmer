@@ -1,22 +1,25 @@
-
 import java.io.*;
-        import java.math.*;
-        import java.security.*;
-        import java.text.*;
-        import java.util.*;
-        import java.util.concurrent.*;
-        import java.util.function.*;
-        import java.util.regex.*;
-        import java.util.stream.*;
-        import static java.util.stream.Collectors.joining;
-        import static java.util.stream.Collectors.toList;
+import java.util.*;
+import java.util.stream.*;
+
+import static java.util.stream.Collectors.joining;
+import static java.util.stream.Collectors.toList;
 
 public class CompareTheTriplets {
 
     // Complete the compareTriplets function below.
     static List<Integer> compareTriplets(List<Integer> a, List<Integer> b) {
+        int alice = 0;
+        int bob = 0;
 
-
+        for (int i = 0; i < 3; i++) {
+            if (a.get(i) > b.get(i)) {
+                alice++;
+            } else if (a.get(i) < b.get(i)) {
+                bob++;
+            }
+        }
+        return Arrays.asList(alice, bob);
     }
 
     public static void main(String[] args) throws IOException {
