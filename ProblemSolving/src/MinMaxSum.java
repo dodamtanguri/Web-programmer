@@ -11,18 +11,19 @@ public class MinMaxSum {
 
     // Complete the miniMaxSum function below.
     static void miniMaxSum(int[] arr) {
-        int temp = 0;
-        for (int i = 0; i < arr.length; i++)
-        {
-            for (int j = i + 1; j < arr.length; j++) {
-                if (arr[i] > arr[j])
-                {
-                    temp = arr[i];
-                    arr[i] = arr[j];
-                    arr[j] = temp;
-                }
-            }
-        }
+       // int temp = 0;
+//        for (int i = 0; i < arr.length; i++)
+//        {
+//            for (int j = i + 1; j < arr.length; j++) {
+//                if (arr[i] > arr[j])
+//                {
+//                    temp = arr[i];
+//                    arr[i] = arr[j];
+//                    arr[j] = temp;
+//                }
+//            }
+//        }
+        Arrays.sort(arr);
 
         long minSum = 0;
         long maxSum = 0;
