@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Data Structures/Array/Array.iml" filepath="$PROJECT_DIR$/Data Structures/Array/Array.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BaekJoon/BaekJoon_Algorithms/BaekJoon_Implementation/BaekJoon_Implementation.iml" filepath="$PROJECT_DIR$/BaekJoon/BaekJoon_Algorithms/BaekJoon_Implementation/BaekJoon_Implementation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CodingTestReview/CodingTest/CodingTest.iml" filepath="$PROJECT_DIR$/CodingTestReview/CodingTest/CodingTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BaekJoon/BaekJoon_Algorithms/DynamicProgramming/DynamicProgramming.iml" filepath="$PROJECT_DIR$/BaekJoon/BaekJoon_Algorithms/DynamicProgramming/DynamicProgramming.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CodingTestReview/Gabia/Gabia.iml" filepath="$PROJECT_DIR$/CodingTestReview/Gabia/Gabia.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BaekJoon/BaekJoon_Algorithms/Greedy/Greedy.iml" filepath="$PROJECT_DIR$/BaekJoon/BaekJoon_Algorithms/Greedy/Greedy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HackerRank/HackerRank_Algorithms/Implementation/Implementation.iml" filepath="$PROJECT_DIR$/HackerRank/HackerRank_Algorithms/Implementation/Implementation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BaekJoon/BaekJoon_Algorithms/Sort/Sort.iml" filepath="$PROJECT_DIR$/BaekJoon/BaekJoon_Algorithms/Sort/Sort.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Web-programmer.iml" filepath="$PROJECT_DIR$/.idea/Web-programmer.iml" />
+    </modules>
+  </component>
+</project>
