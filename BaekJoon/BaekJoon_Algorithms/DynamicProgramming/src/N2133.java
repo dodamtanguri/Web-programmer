@@ -9,7 +9,7 @@ public class N2133 {
         System.out.println(result(num));
     }
 
-    static public int result(int num) {
+    public static int result(int num) {
         if (num == 0) return 1;
         if (num == 1) return 0;
         if (num == 2) return 3;
