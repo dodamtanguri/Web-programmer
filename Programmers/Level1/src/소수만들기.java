@@ -8,7 +8,7 @@ public class 소수만들기 {
                     int num = nums[i] + nums[j] + nums[k];
                     if (num >= 2)
                         check = primeNumber(num);
-                    if (check == true)
+                    if (check)
                         answer++;
                 }
             }
