@@ -1,23 +1,42 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Stack;
 
 public class N9935 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String s = br.readLine();
-        String t = br.readLine();
+        String str = br.readLine();
+        String target = br.readLine();
 
-        while (s.contains(t)){
-            s = s.replaceAll(t,"");
+        Stack<Character> stk = new Stack<>();
 
+        for (int i = 0; i < str.length(); i++) {
+            stk.push(str.charAt(i));
+            if (stk.peek() == target.charAt(target.length() - 1) && stk.size() >= target.length()) {
+                int idx = target.length() - 2;
+                boolean flag = false;
+
+                for (int j = stk.size() - 2; j >= stk.size() - target.length(); j--) {
+                    if (stk.get(j) != target.charAt(idx--)) {
+                        flag = true;
+                        break;
+                    }
+                }
+                if (!flag) {
+                    for (int j = 0; j < target.length(); j++) {
+                        stk.pop();
+                    }
+                }
+            }
         }
-        if (s.isEmpty()) {
-            System.out.println("FRULA");
-        }else  {
-            System.out.println(s);
-            
+        StringBuilder sb = new StringBuilder();
+        for (char c : stk) {
+            sb.append(c);
         }
-
+        System.out.println(sb.length() > 0 ? sb.toString() : "FRULA");
     }
+
+
 }
+
