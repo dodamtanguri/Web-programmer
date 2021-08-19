@@ -17,12 +17,34 @@ public class ch1H_22887 {
      * 절대값을 씌우면
      *
      * |data[a]-avg| < |data[b]-avg|
-     * 
+     *
      * * * */
 
     public static int findIndex(int[] data, int n)
     {
+        int m = 0; //data[0] ~ data[i-1] 까지 중 평균과 가장 가까운 번호
+        // 1. 합 구하기
+        // 2. 절댓값 구하기
+        /*
+        |-7| = 7
+        |+7| = 7
+        if(n < 0) { abs(n) = -n;}
+        if(n >= 0) { abs(n) = n; }
+         */
+        int sum = 0; //모든 데이터의 합
+        for(int i = 0; i < n; i++) {
+            sum += data[i];
+        }
 
+        for(int i = 0; i < n; i++) {
+           int dm = Math.abs(data[m]*n-sum);
+           int di = Math.abs(data[i]*n-sum);
+           if (dm > di) {
+               m = i;
+           }
+        }
+
+        return m + 1;
     }
 
     public static void main(String[] args)
