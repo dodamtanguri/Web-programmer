@@ -32,6 +32,7 @@ public class Week3_N16507 {
             int c1 = Integer.parseInt(st.nextToken());
             int r2 = Integer.parseInt(st.nextToken());
             int c2 = Integer.parseInt(st.nextToken());
+            //누적합 (picture 함수라고함_
             int result = arr[r2][c2] - (arr[r1 - 1][c2] + arr[r2][c1 - 1] - arr[r1 - 1][c1 - 1]);
 
             result /= ((r2 - r1 + 1) * (c2 - c1 + 1));
