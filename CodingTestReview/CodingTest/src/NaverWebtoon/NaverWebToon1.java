@@ -1,3 +1,5 @@
+package NaverWebtoon;
+
 import java.util.Arrays;
 
 public class NaverWebToon1 {
@@ -16,7 +18,7 @@ public class NaverWebToon1 {
         int idx = discounts.length - 1;
         for (int i = prices.length - 1; i >= 0; i--) {
             if (idx >= 0) {
-                answer += prices[i] * (1 - discounts[idx--]  / (float) 100);
+                answer += prices[i] * (1 - discounts[idx--] / (float) 100);
             } else {
                 answer += prices[i];
             }

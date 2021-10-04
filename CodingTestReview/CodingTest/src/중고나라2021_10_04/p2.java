@@ -1,4 +1,4 @@
-package 중고나라;
+package 중고나라2021_10_04;
 
 public class p2 {
     public long solution(long k) {

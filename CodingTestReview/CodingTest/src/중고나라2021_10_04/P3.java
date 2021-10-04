@@ -1,4 +1,4 @@
-package 중고나라;
+package 중고나라2021_10_04;
 
 public class P3 {
     int answer = 0;
@@ -26,7 +26,7 @@ public class P3 {
 
     public int solution(int[] numbers) {
         dfs(0, numbers);
-        
+
 
         return this.answer;
     }

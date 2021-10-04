@@ -1,3 +1,5 @@
+package Saramin;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -23,7 +25,7 @@ public class SaraminTest {
         if (input == 1)
             System.out.println(num + " is a Happy number.");
         else
-        System.out.println(num + " is an Unhappy number.");
+            System.out.println(num + " is an Unhappy number.");
     }
 
 }

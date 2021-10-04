@@ -1,3 +1,5 @@
+package NaverWebtoon;
+
 public class NaverWebToon2 {
     public static void main(String[] args) {
         NaverWebToon2 test = new NaverWebToon2();

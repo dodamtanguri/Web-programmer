@@ -1,3 +1,5 @@
+package Saramin;
+
 import java.util.Scanner;
 
 public class SaraminTest2 {
