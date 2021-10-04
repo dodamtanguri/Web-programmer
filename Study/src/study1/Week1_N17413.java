@@ -1,3 +1,5 @@
+package study1;
+
 import java.io.*;
 import java.util.Stack;
 import java.util.StringTokenizer;
