@@ -1,7 +1,5 @@
 package 중고나라2021_10_04;
 
-//가장 앞쪽의 이용자만 남겨두고 뒤에 중복 제거
-
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
