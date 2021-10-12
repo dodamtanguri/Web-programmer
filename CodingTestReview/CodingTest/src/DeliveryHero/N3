@@ -1,0 +1,97 @@
+package com.codility.tasks.hibernate.solution;
+
+import org.springframework.stereotype.*;
+import org.springframework.transaction.annotation.*;
+
+import javax.persistence.*;
+import java.util.*;
+
+@Entity
+@Table(name = "person")
+class Person {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+
+    @Column(name = "first_name", length = 50, nullable = false)
+    private String firstName;
+
+    @OneToMany(mappedBy = "person")
+    private Set<Pet> pet = new HashSet<>();
+
+    public Long getId() {
+        return this.id;
+    }
+
+    public String getFirstName() {
+        return this.firstName;
+    }
+
+    public Set<Pet> getPets() {
+        return this.pet;
+    }
+}
+
+@Entity
+@Table(name = "pet")
+class Pet {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+
+    @Column(name = "name", length = 50, nullable = false)
+    private String name;
+
+    @ManyToOne(targetEntity = Person.class)
+    @JoinColumn(name = "owner_id", nullable = false)
+    private Person person;
+
+    public Pet() {
+    }
+
+    public Pet(String petName, Person person) {
+        this.name = petName;
+        this.person = person;
+    }
+
+    public Long getId() {
+        return this.id;
+    }
+
+    public String getOwnerName() {
+        return this.person.getFirstName();
+    }
+
+    public String getName() {
+        return this.name;
+    }
+}
+
+class PersonNotFoundException extends RuntimeException {
+
+}
+
+@Service
+class PersonService {
+
+    private final EntityManager entityManager;
+
+    public PersonService(EntityManager entityManager) {
+        this.entityManager = entityManager;
+    }
+
+    @Transactional
+    public void addPet(Long personId, String petName) {
+        Person person = entityManager.find(Person.class, personId);
+
+        if (person == null) {
+            throw new PersonNotFoundException();
+        }
+
+        Pet pet = new Pet(petName, person);
+        entityManager.persist(pet);
+        entityManager.flush();
+    }
+}
