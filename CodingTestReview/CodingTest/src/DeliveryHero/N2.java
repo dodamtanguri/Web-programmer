@@ -24,7 +24,7 @@ public class N2 {
                 }
             }
         }
-        
+        return null;
     }
 
     private boolean isEmpty(String[][] board, int i, int k, int row, int col) {
@@ -34,5 +34,4 @@ public class N2 {
 
         return board[i][k].equals(".");
     }
-}
 }

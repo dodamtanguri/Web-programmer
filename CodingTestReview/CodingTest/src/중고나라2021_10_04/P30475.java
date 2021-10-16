@@ -4,7 +4,6 @@ import java.util.Arrays;
 import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.Set;
-import java.util.stream.Stream;
 
 public class P30475 {
     public static void main(String[] args) {
@@ -21,10 +20,11 @@ public class P30475 {
             hashSet.add(i);
         }
 
-        Stream<Integer> set = hashSet.stream();
+        //Stream<Integer> set = hashSet.stream();
+
         int[] answer = new int[hashSet.size()];
 
-        Iterator<Integer> it = set.iterator();
+        Iterator<Integer> it = hashSet.iterator();
         for (int i = 0; i < answer.length; i++) {
             answer[i] = it.next();
         }

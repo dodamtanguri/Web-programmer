@@ -5,7 +5,7 @@ public class P3 {
 
     public static void main(String[] args) {
         P3 test = new P3();
-        System.out.println(test.solution(new int[]{1, 1, 1, 1}));
+        System.out.println(test.solution(new int[]{8, 3, 5, 7, 4, 3}));
     }
 
     public void dfs(int dept, int[] numbers) {
